@@ -16,7 +16,7 @@ const HeroPage = () => {
           // className="object-cover"
         />
       </div>
-      <div className='absolute top-[325px] left-[1050px] transform -translate-x-1/2 -translate-y-1/2 w-full max-w-sm px-4'>
+      <div className='absolute top-[325px] left-[1050px] transform -translate-x-1/2 -translate-y-1/2 w-full max-w-sm px-4 hidden lg:block'>
         <HeroRepairCard />
       </div>
     </div>

@@ -44,7 +44,7 @@ const contacts = [
     },
     {
         name: "Email",
-        content: "email@example.com",
+        content: "rgentappliance@gmail.com",
         image: mail
     },
 ]
@@ -69,10 +69,6 @@ const services = [
     {
         name: "Oven Repair",
         icon: "oven",
-    },
-    {
-        name: "Microwave Repair",
-        icon: "microwave",
     },
 ]
 

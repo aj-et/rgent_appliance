@@ -30,7 +30,6 @@ const serviceOptions = [
     "Washer Repair",
     "Dryer Repair",
     "Oven Repair",
-    "Microwave Repair",
 ] as const
 
 const formSchema = z.object({
