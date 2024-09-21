@@ -44,3 +44,8 @@ Typescript
 
 
 This website is inspired by: https://www.figma.com/community/file/1317475878779325750/appliance-repair
+
+
+To do:
+1. Apply Color There: https://coolors.co/0066cc-ffcc00-f8f8f8-f9f9f9
+2. Animation to add carousel on the brands get icons and put in the const 
