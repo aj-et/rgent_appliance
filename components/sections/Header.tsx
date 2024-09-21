@@ -28,7 +28,7 @@ const Header = () => {
     <div className='relative'>
       <div className='flex justify-between p-5 bg-red-500 w-full text-white z-10'>
         <div>
-          <Link href='/' className='text-2xl'>Rgent Appliance Repair</Link>
+          <h1 className='text-2xl'>Rgent Appliance Repair</h1>
         </div>
         {/* <div className='m-x-auto block lg:hidden filter invert'>
           <div className='flex'>

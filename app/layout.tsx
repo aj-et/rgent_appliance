@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Rgent Appliance Repair in Los Angeles California - Rgent Appliance Repair Los Angeles, CA",
-  description: "Rgent Appliance Repair Los Angeles' Trusted Appliance Repair: Residential, Commercial &amp; Property ManagementLocally Owned &amp; Operated | Recognized by Thumbtack &amp; HomeAdvisorWhy Choose Us?Over 100 Five-Star Reviews on ThumbtackExpert repair of refrigerators, washers, dryers, ovens, dishwashers, and more.Specializing in commercial washer dryer repair.Serving homes, businesses, hotels &amp; property managers in Los Angeles.Proactive Maintenance Plans for Long-Term PerformanceSame-day service,",
+  title: "Rgent Appliance Repair in Los Angeles County, California",
+  description: "Rgent Appliance Repair is Los Angeles' Trusted Appliance Repair. Specializing in Appliance Repair for Residential, Commercial and Property Management. Locally Owned and Operated. Call 818-915-5577.",
 };
 
 export default function RootLayout({
