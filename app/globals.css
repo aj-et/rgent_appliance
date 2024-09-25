@@ -25,4 +25,20 @@
 
 .scroll-to-top-button {
     @apply fixed bottom-[90px] right-8 p-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300
-  }
+}
+
+.top_color {
+   @apply bg-[#0066cc] 
+}
+
+.bottom_color {
+    @apply bg-[#ffcc00]
+}
+
+.text_color1 {
+    @apply text-[#f8f8f8]
+}
+
+.text_color2 {
+    @apply text-[#f9f9f9]
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { services } from '../const'
+import Brands from './Brands';
 
 const ServicesPage = () => {
   return (
@@ -19,6 +20,12 @@ const ServicesPage = () => {
               <h3 className="text-xl font-semibold">{service.name}</h3>
             </div>
           ))}
+        </div>
+        <div className='mt-12'>
+          <h4 className='text-3xl mb-12'>Brands</h4>
+          <div className='flex'>
+            <Brands />
+          </div>
         </div>
       </div>
     </section>
