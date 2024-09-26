@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import { useState } from "react"
 
 import { Button } from "../ui/button"
 import {
@@ -38,7 +39,7 @@ const formSchema = z.object({
   emailAddress: z.string().email({ message: "Email address is invalid" }),
   serviceType: z.enum(serviceOptions, { required_error: "Service type is required" }),
   address: z.string().min(10, { message: "Address must be at least 10 characters" }).max(50, { message: "Address must be less than 50 characters" }),
-  comments: z.string().min(10, { message: "Comments must be at least 10 characters" }).max(500, { message: "Comments must be less than 500 characters" }),
+  comments: z.string().max(500, { message: "Comments must be less than 1600 characters" }),
 });
 
 const ContactForm = () => {
@@ -54,6 +55,14 @@ const ContactForm = () => {
             comments: "",
         }
     })
+
+    const [commentCount, setCommentCount] = useState(0)
+    const maxCommentCount = 1600
+
+    const handleCommentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setCommentCount(e.target.value.length)
+        form.setValue("comments", e.target.value)
+    }
 
     //   Define the submit handler
     function onSubmit(values: z.infer<typeof formSchema>) {
@@ -73,7 +82,7 @@ const ContactForm = () => {
                   <FormItem>
                     <FormLabel id="name">Name</FormLabel>
                     <FormControl>
-                      <Input autoComplete="name" placeholder="Enter your name" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" />
+                      <Input autoComplete="name" placeholder="Enter your name" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage className="text-sm text-red-500" />
                   </FormItem>
@@ -86,7 +95,7 @@ const ContactForm = () => {
                   <FormItem>
                     <FormLabel id="phoneNumber">Phone Number</FormLabel>                                                                      
                     <FormControl>
-                      <Input autoComplete="tel" placeholder="Enter your phone number" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" />
+                      <Input autoComplete="tel" placeholder="Enter your phone number" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage className="text-sm text-red-500" />
                   </FormItem>
@@ -99,7 +108,7 @@ const ContactForm = () => {
                   <FormItem>
                     <FormLabel id="emailAddress">Email Address</FormLabel>
                     <FormControl>
-                      <Input autoComplete="email" placeholder="Enter your email address" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" />
+                      <Input autoComplete="email" placeholder="Enter your email address" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400" />
                     </FormControl>
                     <FormMessage className="text-sm text-red-500" />
                   </FormItem>
@@ -145,7 +154,7 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel id="address">Address</FormLabel>
                   <FormControl>
-                    <Textarea autoComplete="address" placeholder="Enter your address" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" />
+                    <Textarea autoComplete="address" placeholder="Enter your address" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400" />
                   </FormControl>
                   <FormMessage className="text-sm text-red-500" />
                 </FormItem>
@@ -158,9 +167,17 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel id="comments">Comments</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Enter the details about the issue" {...field} className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" />
+                    <Textarea 
+                      placeholder="Enter the details about the issue" 
+                      {...field} 
+                      onChange={handleCommentChange}
+                      className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
+                    />
                   </FormControl>
                   <FormMessage className="text-sm text-red-500" />
+                  <div className="text-sm text-gray-500"> 
+                    {commentCount}/{maxCommentCount} characters
+                  </div>
                 </FormItem>
               )}
             />

@@ -56,14 +56,14 @@ const MakeAppointmentPage = () => {
           </div>
         </div>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <a
             href="#appointment"
             className="bg-red-600 text-white py-3 px-6 rounded-lg text-lg font-semibold"
           >
             Make Appointment
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   )

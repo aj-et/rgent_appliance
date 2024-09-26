@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { imagePlaceholder } from '@/public/images'
+import Link from 'next/link'
 
 const AboutUsPage = () => {
   return (
@@ -50,12 +51,11 @@ const AboutUsPage = () => {
         </div>
 
         <div className="mt-12">
-          <a
-            href="#appointment"
-            className="bg-red-600 text-white py-3 px-6 rounded-lg text-lg font-semibold"
-          >
+        <Link href='#contact-us'>
+          <button className="bg-red-600 text-white py-3 px-6 rounded-lg text-lg font-semibold">
             Make Appointment
-          </a>
+          </button>
+        </Link>
         </div>
       </div>
     </section>

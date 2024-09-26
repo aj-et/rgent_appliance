@@ -53,13 +53,13 @@ export default function Home() {
         <MakeAppointmentPage />
       </div>
 
-      <div id="reviews">
+      {/* <div id="reviews">
         <ReviewsPage />
       </div>
 
       <div id="faq">
         <FAQPage />
-      </div>
+      </div> */}
 
       <div id="contact-us">
         <ContactUsPage />

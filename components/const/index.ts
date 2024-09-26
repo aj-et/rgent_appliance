@@ -47,18 +47,18 @@ const nav = [
         name: "Services",
         id: "services"
     },
-    {
-        name: "Make Appointment",
-        id: "make-appointment"
-    },
-    {
-        name: "Reviews",
-        id: "reviews"
-    },
-    {
-        name: "FAQ",
-        id: "faq"
-    },
+    // {
+    //     name: "Make Appointment",
+    //     id: "make-appointment"
+    // },
+    // {
+    //     name: "Reviews",
+    //     id: "reviews"
+    // },
+    // {
+    //     name: "FAQ",
+    //     id: "faq"
+    // },
     {
         name: "Contact Us",
         id: "contact-us"
