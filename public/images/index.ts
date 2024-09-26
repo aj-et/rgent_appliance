@@ -6,6 +6,6 @@ import arrowDown from "./arrowDown.svg";
 import menu from "./menu.svg";
 import arrowDropUp from "./arrowDropUp.svg";
 import arrowDropDown from "./arrowDropDown.svg";
-import imagePlaceholder from "./imagePlaceholder.svg";
+import imagePlaceholder from "./imagePLaceholder.svg";
 
 export { mail, phone, map, applianceRepair, arrowDown, menu, arrowDropUp, arrowDropDown, imagePlaceholder }
