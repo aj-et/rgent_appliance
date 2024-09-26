@@ -19,7 +19,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Rgent Appliance Repair in Los Angeles County, California",
-  description: "Rgent Appliance Repair is Los Angeles' Trusted Appliance Repair. Specializing in Appliance Repair for Residential, Commercial and Property Management. Locally Owned and Operated. Call 818-915-5577.",
+  description: "Rgent Appliance Repair is Los Angeles' Trusted Appliance Repair. Locally Owned and Operated. Call 818-915-5577.",
 };
 
 export default function RootLayout({

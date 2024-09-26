@@ -9,7 +9,7 @@ const AboutUsPage = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">About Us</h2>
         <p className="text-lg mb-12">
-          We offer diverse household & commercial services: appliance repair, servicing, installation for any model.
+          Rgent Appliance Repair offers diverse household & commercial services: appliance repair, servicing, installation for any model.
           <br></br>Schedule now for swift doorstep assistance!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
