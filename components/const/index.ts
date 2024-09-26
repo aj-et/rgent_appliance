@@ -1,7 +1,8 @@
 import {
     mail,
     phone,
-    map
+    map,
+    imagePlaceholder
 } from "../../public/images";
 
 import {
@@ -85,23 +86,23 @@ const contacts = [
 const services = [
     {
         name: "Refrigerator Repair",
-        icon: "refrigerator",
+        icon: imagePlaceholder,
     },
     {
         name:  "Dishwasher Repair",
-        icon: "dishwasher",
+        icon: imagePlaceholder,
     },
     {
         name: "Washer Repair",
-        icon: "washer",
+        icon: imagePlaceholder,
     },
     {
         name: "Dryer Repair",
-        icon: "dryer",
+        icon: imagePlaceholder,
     },
     {
         name: "Oven Repair",
-        icon: "oven",
+        icon: imagePlaceholder,
     },
 ]
 

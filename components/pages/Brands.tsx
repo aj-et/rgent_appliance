@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { brands } from '../const'
-import Autoplay from 'embla-carousel-autoplay'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { 
     Carousel, 
@@ -11,24 +10,26 @@ import React from 'react';
 
 const Brands = () => {
     const plugin = React.useRef(
-        // Autoplay({ delay: 1000, stopOnInteraction: false })
-        AutoScroll({ playOnInit: true })
+        AutoScroll({ 
+            speed: 2, 
+            startDelay: 1000,
+            stopOnInteraction: false
+        })
     )
 
   return (
-    <div className='flex justify-center m-auto p-3 bg-red-500'>
+    <div className='w-full m-auto p-3 flex justify-center bg-red-500 overflow-hidden'>
         <Carousel
             plugins={[plugin.current]}
             opts={{ 
                 align: 'start',
-                loop: true,
-                dragFree: true
+                loop: true
             }}
         >
           <CarouselContent>
             {brands.map((brand, index) => (
-              <CarouselItem key={index} className='basis-1/7'>
-                <Image src={brand.image} alt={`${brand.name} Logo`} width={100} height={100} />
+              <CarouselItem key={index} className='basis-1/3 md:basis-1/4 lg:basis-1/6 object-contain'>
+                <Image src={brand.image} alt={brand.name} width={200} />
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { services } from '../const'
 import Brands from './Brands';
+import Image from 'next/image';
 
 const ServicesPage = () => {
   return (
@@ -15,15 +16,15 @@ const ServicesPage = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-red-600 text-white p-6 rounded-lg shadow-md">
               <div className="flex justify-center mb-4">
-                <img src={service.icon} alt={`${service.name} Icon`} className="w-12 h-12" />
+                <Image src={service.icon} alt={`${service.name} Icon`} className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-semibold">{service.name}</h3>
             </div>
           ))}
         </div>
-        <div className='mt-12'>
-          <h4 className='text-3xl mb-12'>Brands</h4>
-          <div className='flex'>
+        <div className='mt-20'>
+          <h4 className='text-3xl mb-5'>Brands</h4>
+          <div className=''>
             <Brands />
           </div>
         </div>

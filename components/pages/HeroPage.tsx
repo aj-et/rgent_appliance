@@ -11,7 +11,7 @@ const HeroPage = () => {
           src={applianceRepair}
           alt="Appliance Repair"
           width={1000}
-          height={1000}
+          priority
           // layout="responsive"
           // className="object-cover"
         />

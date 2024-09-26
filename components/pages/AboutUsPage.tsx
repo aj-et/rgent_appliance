@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import { imagePlaceholder } from '@/public/images'
 
 const AboutUsPage = () => {
   return (
@@ -13,7 +15,7 @@ const AboutUsPage = () => {
           {/* Transparency Section */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <img src="/path-to-icon/transparency-icon.png" alt="Transparency Icon" className="w-12 h-12" />
+              <Image src={imagePlaceholder} alt="Transparency Icon" className="w-12 h-12" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Transparency</h3>
             <p className="text-sm">
@@ -25,7 +27,7 @@ const AboutUsPage = () => {
           {/* Complete Warranty Section */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <img src="/path-to-icon/warranty-icon.png" alt="Complete Warranty Icon" className="w-12 h-12" />
+              <Image src={imagePlaceholder} alt="Complete Warranty Icon" className="w-12 h-12" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Complete Warranty</h3>
             <p className="text-sm">
@@ -37,7 +39,7 @@ const AboutUsPage = () => {
           {/* Licensed Technicians Section */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <img src="/path-to-icon/technician-icon.png" alt="Licensed Technicians Icon" className="w-12 h-12" />
+              <Image src={imagePlaceholder} alt="Licensed Technicians Icon" className="w-12 h-12" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Licensed Technicians</h3>
             <p className="text-sm">
