@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { useState } from "react"
 
+import { contacts } from "../const"
 import { Button } from "../ui/button"
 import {
     Form,
@@ -66,8 +67,9 @@ const ContactForm = () => {
 
     //   Define the submit handler
     function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
-        form.reset()
+      const emailLink = `mailto:rgentappliance@gmail.com?subject=${values.serviceType}&body=Name: ${values.name}%0D%0APhone: ${values.phoneNumber}%0D%0AAddress: ${values.address}%0D%0AComments: ${values.comments}`
+      window.location.href = emailLink
+      form.reset()
     }
 
     return (
